@@ -1,54 +1,140 @@
-// index.js
-// 获取应用实例
-const app = getApp()
-
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    expandedRuleIndex: -1,
+    civil: [
+      {
+        title: "第一编  总  则",
+        chapters: [
+          "第一章  基本规定",
+          "第二章  自 然 人",
+          "第三章  法  人",
+          "第四章  非法人组织",
+          "第五章  民事权利",
+          "第六章  民事法律行为",
+          "第七章  代  理",
+          "第八章  民事责任",
+          "第九章  诉讼时效",
+          "第十章  期间计算",
+        ],
+      },
+      {
+        title: "第二编  物  权",
+
+        chapters: [
+          "第一章  一般规定",
+          "第二章  物权的设立、变更、转让和消灭",
+          "第三章  物权的保护",
+          "第四章  一般规定",
+          "第五章  国家所有权和集体所有权、私人所有权",
+          "第六章  业主的建筑物区分所有权",
+          "第七章  相邻关系",
+          "第八章  共  有",
+          "第九章  所有权取得的特别规定",
+          "第十章  一般规定",
+          "第十一章  土地承包经营权",
+          "第十二章  建设用地使用权",
+          "第十三章  宅基地使用权",
+          "第十四章  居 住 权",
+          "第十五章  地 役 权",
+          "第十六章  一般规定",
+          "第十七章  抵 押 权",
+          "第十八章  质  权",
+          "第十九章  留 置 权",
+          "第二十章  占  有",
+        ],
+      },
+      {
+        title: "第三编  合  同",
+        chapters: [
+          "第一章  一般规定",
+          "第二章  合同的订立",
+          "第三章  合同的效力",
+          "第四章  合同的履行",
+          "第五章  合同的保全",
+          "第六章  合同的变更和转让",
+          "第七章  合同的权利义务终止",
+          "第八章  违约责任",
+          "第九章  买卖合同",
+          "第十章  供用电、水、气、热力合同",
+          "第十一章  赠与合同",
+          "第十二章  借款合同",
+          "第十三章  保证合同",
+          "第十四章  租赁合同",
+          "第十五章  融资租赁合同",
+          "第十六章  保理合同",
+          "第十七章  承揽合同",
+          "第十八章  建设工程合同",
+          "第十九章  运输合同",
+          "第二十章  技术合同",
+          "第二十一章  保管合同",
+          "第二十二章  仓储合同",
+          "第二十三章  委托合同",
+          "第二十四章  物业服务合同",
+          "第二十五章  行纪合同",
+          "第二十六章  中介合同",
+          "第二十七章  合伙合同",
+          "第二十八章  无因管理",
+          "第二十九章  不当得利",
+        ],
+      },
+      {
+        title: "第四编  人 格 权",
+        chapters: [
+          "第一章  一般规定",
+          "第二章  生命权、身体权和健康权",
+          "第三章  姓名权和名称权",
+          "第四章  肖 像 权",
+          "第五章  名誉权和荣誉权",
+          "第六章  隐私权和个人信息保护",
+        ],
+      },
+      {
+        title: "第五编  婚姻家庭",
+        chapters: [
+          "第一章  一般规定",
+          "第二章  结  婚",
+          "第三章  家庭关系",
+          "第四章  离  婚",
+          "第五章  收  养",
+        ],
+      },
+      {
+        title: "第六编  继  承",
+        chapters: [
+          "第一章  一般规定",
+          "第二章  法定继承",
+          "第三章  遗嘱继承和遗赠",
+          "第四章  遗产的处理",
+        ],
+      },
+      {
+        title: "第七编  侵权责任",
+        chapters: [
+          "第一章  一般规定",
+          "第二章  损害赔偿",
+          "第三章  责任主体的特殊规定",
+          "第四章  产品责任",
+          "第五章  机动车交通事故责任",
+          "第六章  医疗损害责任",
+          "第七章  环境污染和生态破坏责任",
+          "第八章  高度危险责任",
+          "第九章  饲养动物损害责任",
+          "第十章  建筑物和物件损害责任",
+        ],
+      },
+      {
+        title: "附  则",
+      },
+    ],
   },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad() {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  handleToggleCollapse: function (e) {
+    const index = e.target.dataset.index;
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
-})
+      expandedRuleIndex: index === this.data.expandedRuleIndex ? "-1" : index,
+    });
+  },
+  handleNavigateToChapter: function (e) {
+    const { partIndex } = e.target.dataset;
+    console.log(e);
+  },
+});

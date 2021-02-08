@@ -1,21 +1,51 @@
-/**index.wxss**/
-.userinfo {
+page {
+  background: #f0f0f0;
+  padding-bottom: 40px;
+}
+.index-introduce {
+  padding: 12px;
+  color: #666;
+  font-size: 14px;
+}
+
+.index-part {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  line-height: 3;
+  color: #333;
+  font-size: 16px;
+  padding: 0 16px;
+}
+
+.index-secondaryPart {
+  line-height: 3;
+  color: #999;
+  font-size: 16px;
+  padding: 0 16px;
+  border-top: 1px solid #ccc;
+}
+
+.index-chapter-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  border-top: 1px solid #ccc;
+  line-height: 3;
+  color: #666;
+  font-size: 16px;
+  padding: 0 16px;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.index-chapter {
+  flex: 1;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.index-title {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 40px;
+  background: #f0f0f0;
+  color: red;
+  text-align: center;
 }

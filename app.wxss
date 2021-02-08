@@ -1,10 +1,37 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+page {
+  background-color: #f0f0f0;
+}
+.civil {
+  padding: 0 12px 12px;
+}
+.civil-section {
+  color: #666;
+  line-height: 2;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 12px;
+}
+.civil-item {
+  color: #666;
+  margin-top: 12px;
+  font-weight: bold;
+}
+.civil-content {
+  color: #666;
+}
+
+.civil-paragraph {
+  margin-top: 12px;
+}
+
+.global-with-arrow::after {
+  content: " ";
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  border-width: 1px 1px 0 0;
+  border-color: #666;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}

@@ -1,7 +1,9 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/part1Chapter1/part1Chapter1",
+    "pages/part1Chapter2/part1Chapter2",
+    "pages/part2Chapter2/part2Chapter2"
   ],
   "window":{
     "backgroundTextStyle":"light",
