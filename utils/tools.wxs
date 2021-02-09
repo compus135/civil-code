@@ -1,0 +1,6 @@
+function isArray(arg) {
+  return typeof arg === "object";
+}
+module.exports = {
+  isArray: isArray,
+};

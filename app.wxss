@@ -25,7 +25,10 @@ page {
   margin-top: 12px;
 }
 
-.global-with-arrow::after {
+.civil-paragraph:first-child {
+  margin-top: 0;
+}
+.civil-with-arrow::after {
   content: " ";
   display: inline-block;
   height: 9px;

@@ -10,7 +10,7 @@
           <view wx:for="{{part.secondaryPart}}" wx:for-index="secondaryPartIndex" wx:key="secondaryPartIndex">
             <view class="index-secondaryPart">{{item.title}}</view>
             <view wx:for="{{item.chapters}}" wx:key="index">
-              <navigator class="index-chapter-wrapper global-with-arrow" url=''>
+              <navigator class="index-chapter-wrapper civil-with-arrow" url=''>
                 <view class="index-chapter">{{item}}</view>
               </navigator>
             </view>
@@ -18,7 +18,7 @@
         </view>
         <view wx:else>
           <view wx:for="{{part.chapters}}" wx:key="index">
-            <navigator class="index-chapter-wrapper global-with-arrow" url='{{"../part"+(partIndex +1)+"Chapter"+(index+1)+"/part"+(partIndex +1)+"Chapter"+(index+1)}}'>
+            <navigator class="index-chapter-wrapper civil-with-arrow" url='{{"../part"+(partIndex +1)+"Chapter"+(index+1)+"/part"+(partIndex +1)+"Chapter"+(index+1)}}'>
               <view class="index-chapter">{{item}}</view>
             </navigator>
           </view>
