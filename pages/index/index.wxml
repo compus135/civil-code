@@ -1,16 +1,24 @@
+<wxs src="../../utils/tools.wxs" module="tools"></wxs>
 <view class="index">
   <view class="index-introduce">民法典在国家法律体系中的地位仅次于宪法。民法典是市场经济的基本法、市民生活的基本行为准则，法官裁判民商事案件的基本依据。</view>
   <view>
     <view wx:for="{{civil}}" wx:for-item="part" wx:for-index="partIndex" wx:key="partIndex">
-      <view bind:tap="handleToggleCollapse" data-index="{{partIndex}}" class="index-part">
-        {{part.title}}
+      <view wx:if="{{partIndex === 7}}">
+        <navigator class="index-part" url='{{"../part8/part8?partIndex=7"}}'>
+          {{part.title}}
+        </navigator>
+      </view>
+      <view wx:else>
+        <view bind:tap="handleToggleCollapse" data-index="{{partIndex}}" class="index-part">
+          {{part.title}}
+        </view>
       </view>
       <view wx:if="{{partIndex === expandedRuleIndex}}">
         <view wx:if="{{part.secondaryPart}}">
           <view wx:for="{{part.secondaryPart}}" wx:for-index="secondaryPartIndex" wx:key="secondaryPartIndex">
             <view class="index-secondaryPart">{{item.title}}</view>
             <view wx:for="{{item.chapters}}" wx:key="index">
-              <navigator class="index-chapter-wrapper civil-with-arrow" url=''>
+              <navigator class="index-chapter-wrapper civil-with-arrow" url='{{tools.getUrl(partIndex,index)}}'>
                 <view class="index-chapter">{{item}}</view>
               </navigator>
             </view>
@@ -18,7 +26,7 @@
         </view>
         <view wx:else>
           <view wx:for="{{part.chapters}}" wx:key="index">
-            <navigator class="index-chapter-wrapper civil-with-arrow" url='{{"../part"+(partIndex +1)+"Chapter"+(index+1)+"/part"+(partIndex +1)+"Chapter"+(index+1)}}'>
+            <navigator class="index-chapter-wrapper civil-with-arrow" url='{{tools.getUrl(partIndex,index)}}'>
               <view class="index-chapter">{{item}}</view>
             </navigator>
           </view>

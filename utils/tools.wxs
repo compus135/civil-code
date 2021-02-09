@@ -1,6 +1,65 @@
 function isArray(arg) {
-  return typeof arg === "object";
+  return typeof arg == "object";
+}
+
+function getUrl(partIndex, chapterIndex, flag) {
+  var partChapterCounts = [10, 20, 29, 6, 5, 4, 10];
+
+  partIndex = parseInt(partIndex);
+  chapterIndex = parseInt(chapterIndex);
+  if (flag == -1) {
+    if (partIndex == 0) {
+      if (chapterIndex == 0) {
+        return null;
+      } else {
+        chapterIndex -= 1;
+      }
+    } else {
+      if (chapterIndex == 0) {
+        partIndex -= 1;
+        chapterIndex = partChapterCounts[partIndex - 1] - 1;
+      } else {
+        chapterIndex -= 1;
+      }
+    }
+  } else if (flag == 1) {
+    if (partIndex == 7) {
+      return null;
+    } else if (partIndex == 6) {
+      if (partChapterCounts[partIndex] - 1 == chapterIndex) {
+        return "../part8/part8?partIndex=7";
+      }
+    } else {
+      if (partChapterCounts[partIndex] - 1 == chapterIndex) {
+        partIndex += 1;
+        chapterIndex = 1;
+      } else {
+        chapterIndex += 1;
+      }
+    }
+  } else {
+    if (partIndex == 7) {
+      return "../part8/part8?partIndex=7";
+    }
+  }
+  var realPart = partIndex + 1;
+  var realChapter = chapterIndex + 1;
+  return (
+    "../part" +
+    realPart +
+    "Chapter" +
+    realChapter +
+    "/part" +
+    realPart +
+    "Chapter" +
+    realChapter +
+    "?partIndex=" +
+    partIndex +
+    "&chapterIndex=" +
+    chapterIndex
+  );
 }
 module.exports = {
   isArray: isArray,
+  getUrl: getUrl,
 };

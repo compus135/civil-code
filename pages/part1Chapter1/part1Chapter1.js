@@ -58,4 +58,8 @@ Page({
       },
     ],
   },
+  onLoad: function (options) {
+    const { partIndex, chapterIndex } = options;
+    this.setData({ partIndex, chapterIndex });
+  },
 });

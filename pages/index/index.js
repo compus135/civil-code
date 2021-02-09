@@ -132,6 +132,7 @@ Page({
     this.setData({
       expandedRuleIndex: index === this.data.expandedRuleIndex ? "-1" : index,
     });
+    
   },
   handleNavigateToChapter: function (e) {
     const { partIndex } = e.target.dataset;
