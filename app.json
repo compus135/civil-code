@@ -3,7 +3,40 @@
     "pages/index/index",
     "pages/part1Chapter1/part1Chapter1",
     "pages/part1Chapter2/part1Chapter2",
-    "pages/part2Chapter2/part2Chapter2"
+
+    "pages/part2Chapter1/part2Chapter1",
+    "pages/part2Chapter2/part1Chapter2",
+    "pages/part2Chapter3/part1Chapter3",
+    "pages/part2Chapter4/part1Chapter4",
+    "pages/part2Chapter5/part1Chapter5",
+    "pages/part2Chapter6/part1Chapter6",
+    "pages/part2Chapter7/part1Chapter7",
+    "pages/part2Chapter8/part1Chapter8",
+    "pages/part2Chapter9/part1Chapter9",
+    "pages/part2Chapter10/part2Chapter10",
+    "pages/part2Chapter11/part2Chapter11",
+    "pages/part2Chapter12/part2Chapter12",
+    "pages/part2Chapter13/part2Chapter13",
+    "pages/part2Chapter14/part2Chapter14",
+    "pages/part2Chapter15/part2Chapter15",
+    "pages/part2Chapter16/part2Chapter16",
+    "pages/part2Chapter17/part2Chapter17",
+    "pages/part2Chapter18/part2Chapter18",
+    "pages/part2Chapter19/part2Chapter19",
+    "pages/part2Chapter20/part2Chapter20",
+    
+    "pages/part3Chapter1/part3Chapter1",
+    "pages/part3Chapter2/part3Chapter2",
+    "pages/part3Chapter3/part3Chapter3",
+    "pages/part3Chapter4/part3Chapter4",
+    "pages/part3Chapter5/part3Chapter5",
+    "pages/part3Chapter6/part3Chapter6",
+    "pages/part3Chapter7/part3Chapter7",
+    "pages/part3Chapter8/part3Chapter8",
+    "pages/part3Chapter9/part3Chapter9",
+    "pages/part3Chapter10/part3Chapter10"
+    
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
