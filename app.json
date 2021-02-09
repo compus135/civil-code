@@ -5,14 +5,14 @@
     "pages/part1Chapter2/part1Chapter2",
 
     "pages/part2Chapter1/part2Chapter1",
-    "pages/part2Chapter2/part1Chapter2",
-    "pages/part2Chapter3/part1Chapter3",
-    "pages/part2Chapter4/part1Chapter4",
-    "pages/part2Chapter5/part1Chapter5",
-    "pages/part2Chapter6/part1Chapter6",
-    "pages/part2Chapter7/part1Chapter7",
-    "pages/part2Chapter8/part1Chapter8",
-    "pages/part2Chapter9/part1Chapter9",
+    "pages/part2Chapter2/part2Chapter2",
+    "pages/part2Chapter3/part2Chapter3",
+    "pages/part2Chapter4/part2Chapter4",
+    "pages/part2Chapter5/part2Chapter5",
+    "pages/part2Chapter6/part2Chapter6",
+    "pages/part2Chapter7/part2Chapter7",
+    "pages/part2Chapter8/part2Chapter8",
+    "pages/part2Chapter9/part2Chapter9",
     "pages/part2Chapter10/part2Chapter10",
     "pages/part2Chapter11/part2Chapter11",
     "pages/part2Chapter12/part2Chapter12",
@@ -40,9 +40,9 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#e4242b",
+    "navigationBarTitleText": "口袋民法典",
+    "navigationBarTextStyle":"white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

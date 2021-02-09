@@ -46,6 +46,6 @@ page {
   right: 0;
   line-height: 40px;
   background: #f0f0f0;
-  color: red;
+  color: #e4242b;
   text-align: center;
 }
