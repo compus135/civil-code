@@ -4,9 +4,7 @@
   <view>
     <view wx:for="{{civil}}" wx:for-item="part" wx:for-index="partIndex" wx:key="partIndex">
       <view wx:if="{{partIndex === 7}}">
-        <navigator class="index-part" url='{{"../part8/part8?partIndex=7"}}'>
-          {{part.title}}
-        </navigator>
+        <navigator class="index-part" url='../part8/part8?partIndex=7'>{{part.title}}</navigator>
       </view>
       <view wx:else>
         <view bind:tap="handleToggleCollapse" data-index="{{partIndex}}" class="index-part">

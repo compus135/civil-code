@@ -32,13 +32,17 @@
         </view>
         <view class="civil-navigator">
             <view wx:if="{{tools.getUrl(partIndex,chapterIndex,-1)}}">
-                <navigator url="{{tools.getUrl(partIndex,chapterIndex,-1)}}">上一章</navigator>
+                <navigator url="{{tools.getUrl(partIndex,chapterIndex,-1)}}" open-type="redirect">
+                    上一章
+                </navigator>
             </view>
             <view wx:else>
                 <view class="civil-navigator-disabled">上一章</view>
             </view>
             <view wx:if="{{tools.getUrl(partIndex,chapterIndex,1)}}">
-                <navigator url="{{tools.getUrl(partIndex,chapterIndex,1)}}">下一章</navigator>
+                <navigator url="{{tools.getUrl(partIndex,chapterIndex,1)}}" open-type="redirect">
+                    下一章
+                </navigator>
             </view>
             <view wx:else>
                 <view class="civil-navigator-disabled">下一章</view>

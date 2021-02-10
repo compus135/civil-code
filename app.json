@@ -34,9 +34,9 @@
     "pages/part3Chapter7/part3Chapter7",
     "pages/part3Chapter8/part3Chapter8",
     "pages/part3Chapter9/part3Chapter9",
-    "pages/part3Chapter10/part3Chapter10"
+    "pages/part3Chapter10/part3Chapter10",
     
-    
+    "pages/part8/part8"   
   ],
   "window":{
     "backgroundTextStyle":"light",

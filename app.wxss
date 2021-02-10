@@ -3,7 +3,7 @@ page {
   background-color: #f0f0f0;
 }
 .civil {
-  padding: 0 12px 12px;
+  padding: 0 12px 60px;
 }
 .civil-section {
   color: #666;
@@ -43,12 +43,11 @@ page {
   bottom: 0;
   left: 0;
   right: 0;
-  /* height: 40px; */
   background-color: white;
   color: #e4242b;
   display: flex;
   justify-content: space-between;
-  line-height: 40px;
+  line-height: 48px;
   padding: 0 16px;
 }
 .civil-navigator-disabled {
