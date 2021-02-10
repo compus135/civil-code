@@ -1,0 +1,4 @@
+<import src="../common/chapter"></import>
+<view>
+    <template is="chapter" data="{{civil,partIndex,chapterIndex}}"></template>
+</view>
