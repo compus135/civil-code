@@ -15,7 +15,7 @@ function getUrl(partIndex, chapterIndex, flag) {
         chapterIndex -= 1;
       }
     } else {
-      if (chapterIndex == 0) {
+      if (chapterIndex == 0 || partIndex == 7) {
         partIndex -= 1;
         chapterIndex = partChapterCounts[partIndex - 1] - 1;
       } else {
